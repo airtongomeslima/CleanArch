@@ -1,6 +1,7 @@
 using CleanArch.Infra.Data.Context;
 using CleanArch.Infra.IoC;
 using CleanArch.MVC.Data;
+using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,6 +22,8 @@ builder.Services.AddDbContext<UniversityDBContext>(options =>
 });
 
 DependencyContainer.RegisterServices(builder.Services);
+
+builder.Services.AddMediatR(typeof(StartupBase));
 
 var app = builder.Build();
 
