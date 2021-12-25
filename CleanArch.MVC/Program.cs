@@ -20,9 +20,10 @@ builder.Services.AddDbContext<UniversityDBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("UniversityDbConnection"));
 });
 
+DependencyContainer.RegisterServices(builder.Services);
+
 var app = builder.Build();
 
-DependencyContainer.RegisterServices(builder.Services);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
