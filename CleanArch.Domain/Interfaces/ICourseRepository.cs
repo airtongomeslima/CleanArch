@@ -10,5 +10,6 @@ namespace CleanArch.Domain.Interfaces
     public interface ICourseRepository
     {
         List<Course> GetCourses();
+        void Add(Course course);
     }
 }

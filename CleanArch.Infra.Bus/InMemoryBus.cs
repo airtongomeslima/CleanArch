@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CleanArch.Infra.Bus
 {
-    internal sealed class InMemoryBus : IMediatorHandler
+    public sealed class InMemoryBus : IMediatorHandler
     {
         private readonly IMediator _mediator;
 

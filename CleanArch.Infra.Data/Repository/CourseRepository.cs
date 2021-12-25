@@ -18,6 +18,11 @@ namespace CleanArch.Infra.Data.Repository
             _universityDBContext = universityDBContext;
         }
 
+        public void Add(Course course)
+        {
+            _universityDBContext.Add(course);
+        }
+
         public List<Course> GetCourses()
         {
             return _universityDBContext.Courses.ToList();
